@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+option java_package = "org.delicate.raft.core.proto";
+option java_outer_classname = "RaftMessage";
+
+message Request {
+  string msg = 1;
+}

@@ -6,7 +6,7 @@
 
   <groupId>org.delicate.raft</groupId>
   <artifactId>delicate-raft</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>${revision}</version>
   <modules>
     <module>delicate-raft-core</module>
   </modules>
@@ -17,6 +17,7 @@
     <lombok.version>1.18.12</lombok.version>
     <grpc.version>1.29.0</grpc.version>
     <protobuf.version>3.12.2</protobuf.version>
+    <revision>1.0-SNAPSHOT</revision>
   </properties>
 
   <dependencyManagement>
@@ -45,6 +46,11 @@
         <artifactId>junit</artifactId>
         <version>4.13</version>
         <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.rocksdb</groupId>
+        <artifactId>rocksdbjni</artifactId>
+        <version>6.8.1</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
