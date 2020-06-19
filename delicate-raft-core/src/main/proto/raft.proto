@@ -3,6 +3,20 @@ syntax = "proto3";
 option java_package = "org.delicate.raft.core.proto";
 option java_outer_classname = "RaftMessage";
 
-message Request {
-  string msg = 1;
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  // Sends another greeting
+  rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
 }
